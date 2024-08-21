@@ -1,0 +1,9 @@
+(
+    output: "all",
+    source: Path("/home/b0fa/Pictures/Wallpapers/Dark/722717.png"),
+    filter_by_theme: true,
+    rotation_frequency: 600,
+    filter_method: Lanczos,
+    scaling_mode: Zoom,
+    sampling_method: Alphanumeric,
+)
