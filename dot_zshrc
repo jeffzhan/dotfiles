@@ -91,20 +91,28 @@ export EDITOR=nvim
 # export LANG=en_US.UTF-8
 
 ## Colorize the ls output ##
-alias ls='eza --color=always'
+alias ls='eza --group-directories-first --icons --color-scale'
 
 ## Use a long listing format ##
 alias ll='eza -la'
 
 alias clear='clear;exec $SHELL'
 
-function y() {
+kitty-reload() {
+    kill -SIGUSR1 $(pidof kitty)
+}
+
+y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	IFS= read -r -d '' cwd < "$tmp"
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
