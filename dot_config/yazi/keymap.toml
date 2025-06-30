@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on   = [ "c", "p" ]
+run  = "plugin command"
+desc = "Yazi command prompt"
