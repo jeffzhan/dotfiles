@@ -84,8 +84,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/.cargo/bin:/usr/local/go/bin:$HOME/.go
 export GOPATH=$HOME/.go
 
 export EDITOR=nvim
