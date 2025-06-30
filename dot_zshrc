@@ -98,6 +98,8 @@ alias ll='eza -la'
 
 alias clear='clear;exec $SHELL'
 
+alias cm='chezmoi'
+
 kitty-reload() {
     kill -SIGUSR1 $(pidof kitty)
 }
