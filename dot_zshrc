@@ -96,7 +96,7 @@ export EDITOR=nvim
 ## Colorize the ls output ##
 alias ls='eza --group-directories-first --icons --color-scale'
 
-alias lt='eza -T'
+alias lt='eza --tree --level=2 --icons'
 ## Use a long listing format ##
 alias ll='eza -la'
 
