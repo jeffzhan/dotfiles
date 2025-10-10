@@ -104,6 +104,9 @@ alias clear='clear;exec $SHELL'
 
 alias cm='chezmoi'
 
+## fix ssh on kittty
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
 kitty-reload() {
     kill -SIGUSR1 $(pidof kitty)
 }
